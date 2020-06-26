@@ -1,3 +1,4 @@
+from enum import Enum
 import collections.abc
 import copy
 import datetime
@@ -81,6 +82,12 @@ def return_None():
     return None
 
 
+class Type(Enum):
+     @classmethod
+     def get_choices(cls):
+         return [ (name,value) for (name,value) in enumerate(cls) ]
+
+        
 @total_ordering
 class Field(RegisterLookupMixin):
     """Base class for all field types"""
