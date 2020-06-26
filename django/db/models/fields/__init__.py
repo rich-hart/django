@@ -82,7 +82,7 @@ def return_None():
     return None
 
 
-class Type(Enum):
+class Choice(Enum):
      @classmethod
      def get_choices(cls):
          return [ (name,value) for (name,value) in enumerate(cls) ]
